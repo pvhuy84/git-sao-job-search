@@ -1,5 +1,8 @@
 package model.bean;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Career {
 	private String careerId;
 	private String careerName;
@@ -20,6 +23,15 @@ public class Career {
 	public void setCareerName(String careerName) {
 		this.careerName = careerName;
 	}
-	
+	public JSONObject toJSON() {
+		JSONObject obj = new JSONObject();
+		try {
+			obj.put("careerId", careerId);
+			obj.put("careerName", careerName);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return obj;
+	}
 	
 }

@@ -3,6 +3,9 @@
  */
 package model.bean;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Cv {
 	private int cvId;
 	private int candidateId;
@@ -72,6 +75,21 @@ public class Cv {
 	public void setExperience(String experience) {
 		this.experience = experience;
 	}
-	
+	public JSONObject toJSON() {
+		JSONObject obj = new JSONObject();
+		try {
+			obj.put("cvId", cvId);
+			obj.put("candidateId", candidateId);
+			obj.put("phonenumber", phonenumber);
+			obj.put("age", age);
+			obj.put("gender", gender);
+			obj.put("candidateId", candidateId);
+			obj.put("qualification", qualification);
+			obj.put("experience", experience);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return obj;
+	}
 	
 }
