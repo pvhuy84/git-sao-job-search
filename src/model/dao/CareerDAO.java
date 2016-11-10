@@ -8,24 +8,6 @@ import model.bean.Career;
 
 public class CareerDAO extends DatabaseFactory {
 	String sql="";
-	//Them 1 career vao co so du lieu
-	public boolean addCareer(Career career) {
-		sql = "INSERT INTO career VALUES('?','?')";
-		try {
-			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setString(1, career.getCareerId());
-			preparedStatement.setString(2, career.getCareerName());
-			if(preparedStatement.execute(sql)){
-				preparedStatement.close();
-				return true;
-			}
-			preparedStatement.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return false;
-	}
 	
 	//lay danh sach career
 	public ArrayList<Career> getListCareer(){
@@ -33,7 +15,7 @@ public class CareerDAO extends DatabaseFactory {
 		sql="SELECT * FROM career";
 		try {
 			preparedStatement=connection.prepareStatement(sql);
-			ResultSet rs = preparedStatement.executeQuery(sql);
+			ResultSet rs = preparedStatement.executeQuery();
 			while(rs.next()){
 				listCareer.add(new Career(rs.getString(1), rs.getString(2)));
 			}
@@ -44,4 +26,24 @@ public class CareerDAO extends DatabaseFactory {
 		}
 		return listCareer;
 	}
+	
+	//Them 1 career vao co so du lieu
+		public boolean addCareer(Career career) {
+			sql = "INSERT INTO career VALUES('?','?')";
+			try {
+				preparedStatement = connection.prepareStatement(sql);
+				preparedStatement.setString(1, career.getCareerId());
+				preparedStatement.setString(2, career.getCareerName());
+				if(preparedStatement.execute()){
+					preparedStatement.close();
+					return true;
+				}
+				preparedStatement.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return false;
+		}
+		
 }

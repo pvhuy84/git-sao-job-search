@@ -19,8 +19,14 @@ public class DatabaseFactory{
 	public DatabaseFactory() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			String address = "jdbc:mysql://localhost:3306/jobsearch?useUnicode=true&characterEncoding=utf-8";
-			connection = DriverManager.getConnection(address,"root","");
+			
+			//Connect database local
+			String address = "jdbc:mysql://127.5.246.130:3306/jobsearch";
+			connection = DriverManager.getConnection(address,"adminIy5t97I"," I2ILWARFIYyY");
+			
+			//Connect database local
+//			String address = "jdbc:mysql://localhost:3306/jobsearch?useUnicode=true&characterEncoding=utf-8";
+//			connection = DriverManager.getConnection(address,"root","");
 		} catch (Exception e) {
 			System.err.println("Error: "+e);
 		}
