@@ -1,0 +1,15 @@
+git clone ssh://5823f99d2d5271295300017a@jobsearch-teen9x.rhcloud.com/~/git/jobsearch.git/
+cd jobsearch/
+
+git add .
+git commit -m 'My changes'
+git push
+
+MySQL 5.5 database added.  Please make note of these credentials:
+
+       Root User: adminIy5t97I
+   Root Password: I2ILWARFIYyY
+   Database Name: jobsearch
+
+Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+

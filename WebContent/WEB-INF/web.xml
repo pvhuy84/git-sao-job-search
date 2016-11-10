@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <display-name>git-sao-job-search</display-name>
+  <display-name>git-soa-job-search</display-name>
   <welcome-file-list>
-    <welcome-file>User</welcome-file>
+    <welcome-file>home</welcome-file>
   </welcome-file-list>
   <servlet>
     <servlet-name>Jersey REST Service</servlet-name>
@@ -17,6 +17,7 @@
     <servlet-name>Jersey REST Service</servlet-name>
     <url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>ShowListUserServlet</display-name>
@@ -27,4 +28,15 @@
     <servlet-name>ShowListUserServlet</servlet-name>
     <url-pattern>/ShowListUserServlet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <display-name>home</display-name>
+    <servlet-name>controller.home</servlet-name>
+    <servlet-class>controller.home</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controller.home</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
