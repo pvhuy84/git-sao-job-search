@@ -103,12 +103,12 @@ background-color: #f2f2f2;
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown"><span
+						data-toggle="dropdown" href="#"><span
 							class="glyphicon glyphicon-log-out"></span>Đăng Ký <span
 							class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="dangkythanhvien">Cá nhân</a></li>
-							<li><a href="nhatuyendungdangky">Doanh nghiệp</a></li>
+							<li><a href="#">Cá nhân</a></li>
+							<li><a href="#">Doanh nghiệp</a></li>
 						</ul></li>
 					<li class="dropdown"><a class="dropdown-toggle"
 						data-toggle="dropdown" href="#"><span
@@ -141,6 +141,7 @@ background-color: #f2f2f2;
 				<img src="images/3.jpg" alt="Image">
 				<div class="carousel-caption">
 					<h3>More Job</h3>
+
 				</div>
 			</div>
 		</div>
@@ -154,7 +155,6 @@ background-color: #f2f2f2;
 			<span class="sr-only">Next</span>
 		</a>
 	</div>
-
 	<div class="container text-center">
 		<div class="onimages">
 			<div class="col-sm-2"></div>
@@ -251,15 +251,11 @@ background-color: #f2f2f2;
 						<option value="64">Yên Bái</option>
 					</select>
 				</div>
-
 			</div>
-
 			<div class="col-sm-1">
-
 				<a href="#" role="button" class="btn btn-primary active navb-right"><span
 					class="glyphicon glyphicon-search"></span></a>
 			</div>
-
 		</div>
 		<div class="container">
 			<div class="test">
@@ -286,60 +282,72 @@ background-color: #f2f2f2;
 			</div>
 		</div>
 		<div class="row">
-
-			<h3>
-				<span class="glyphicon glyphicon-briefcase"></span> Việc làm mới <span
-					class="Success Label"></span>
+			<h3 align="left">
+				<span class="glyphicon glyphicon-briefcase"></span> Kết quả tìm kiếm
+				<span class="Success Label"></span>
 			</h3>
 			<div class="col-sm-6">
-
-				<div id="home" class="tab-pane fade in active">
-					<div class="pre-scrollable">
-						<% for(int i=0;i<20;i++){ %>
-						<div class="col-sm-5">
-							<div class="col-xs-5">
-								<img src="images/FPT.png" class="img-rounded" alt="Cinque Terre"
-									width="50" height="40">
-							</div>
-							<div class="col-xs-5">
-								<a href="http://www.w3schools.com">06 Senior PHP Developers-
-									Salary Up To <%=1400*(i+1) %>usd
-								</a>
-
-							</div>
-							<div class="col-xs-2">
-								<p>Urgent!</p>
-							</div>
-						</div>
-						<% } %>
+				<h4 align="center">có 120 kết quả tìm kiếm</h4>
+			</div>
+			<div class="col-sm-6"></div>
+			<br>
+		</div>
+		<div class="row">
+			<div class="col-sm-2">
+				<h4>Họ tên</h4>
+			</div>
+			<div class="col-sm-2">
+				<h4>Ngành nghề</h4>
+			</div>
+			<div class="col-sm-1">
+				<h4>Trình độ/kinh nghiệm</h4>
+			</div>
+			<div class="col-sm-2">
+				<h4>Mức lương</h4>
+			</div>
+			<div class="col-sm-1">
+				<h4>Giới tính</h4>
+			</div>
+			<div class="col-sm-2">
+				<h4>Tỉnh/Thành phố</h4>
+			</div>
+			<div class="col-sm-2">
+				<h4>cập nhật</h4>
+			</div>
+			<br> <br> <br>
+			<h3></h3>
+		</div>
+		<div class="row">
+			<div class="pre-scrollable">
+				<% for (int i=0;i<120;i++){ %>
+				<div class="col-sm-12">
+					<div class="col-sm-2">
+						<p>Nguyen van A</p>
+					</div>
+					<div class="col-sm-2">
+						<p>IT</p>
+					</div>
+					<div class="col-sm-1">
+						<p>1 năm</p>
+					</div>
+					<div class="col-sm-2">
+						<p>7-10 triệu</p>
+					</div>
+					<div class="col-sm-1">
+						<p>Nam</p>
+					</div>
+					<div class="col-sm-2">
+						<p>DN</p>
+					</div>
+					<div class="col-sm-2">
+						<p>11/11/2016</p>
 					</div>
 				</div>
+				<% } %>
 			</div>
-			<div class="col-sm-6">
-				<div id="home" class="tab-pane fade in active">
-					<div class="pre-scrollable">
-						<% for(int i=0;i<20;i++){ %>
-						<div class="col-sm-5">
-							<div class="col-xs-5">
-								<p>Công việc Hot</p>
-							</div>
-							<div class="col-xs-5">
-								<a href="http://www.w3schools.com">Chăm Sóc Khách Hàng BIDV</a>
-
-							</div>
-							<div class="col-xs-2">
-								<img src="images/hot1.png" class="img-rounded"
-									alt="Cinque Terre" width="50" height="40">
-							</div>
-						</div>
-						<%} %>
-					</div>
-				</div>
-			</div>
-
 		</div>
 	</div>
-<br>
+	<br>
 	<footer class="container-fluid text-center">
 		<img src="images/logo.jpg" class="img-rounded" alt="Cinque Terre"
 			width="200" height="100">

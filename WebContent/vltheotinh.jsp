@@ -104,8 +104,24 @@ background-color: #f2f2f2;
        <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Việc làm theo tỉnh</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Đăng ký</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+       <li class="dropdown">
+         
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-out"></span>Đăng Ký
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Cá nhân</a></li>
+          <li><a href="#">Doanh nghiệp</a></li>
+        </ul>
+      </li>
+       <li class="dropdown">
+       
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-in"></span>Đăng Nhập
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Cá nhân</a></li>
+          <li><a href="#">Doanh nghiệp</a></li>
+        </ul>
+      </li>
       </ul>
     </div>
   </div>

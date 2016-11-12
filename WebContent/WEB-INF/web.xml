@@ -9,34 +9,41 @@
     <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
     <init-param>
       <param-name>jersey.config.server.provider.packages</param-name>
-      <param-value>controller</param-value>
+      <param-value>jobsearch.services</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>Jersey REST Service</servlet-name>
-    <url-pattern>/rest/*</url-pattern>
+    <url-pattern>/services/*</url-pattern>
   </servlet-mapping>
-  
-  <servlet>
-    <description></description>
-    <display-name>ShowListUserServlet</display-name>
-    <servlet-name>ShowListUserServlet</servlet-name>
-    <servlet-class>services.ShowListUserServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ShowListUserServlet</servlet-name>
-    <url-pattern>/ShowListUserServlet</url-pattern>
-  </servlet-mapping>
-  
   <servlet>
     <display-name>home</display-name>
-    <servlet-name>controller.home</servlet-name>
-    <servlet-class>controller.home</servlet-class>
+    <servlet-name>jobsearch.controller.home</servlet-name>
+    <servlet-class>jobsearch.controller.home</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>controller.home</servlet-name>
+    <servlet-name>jobsearch.controller.home</servlet-name>
     <url-pattern>/home</url-pattern>
   </servlet-mapping>
-  
+  <servlet>
+    <description></description>
+    <display-name>dangkythanhvien</display-name>
+    <servlet-name>dangkythanhvien</servlet-name>
+    <servlet-class>jobsearch.controller.dangkythanhvien</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dangkythanhvien</servlet-name>
+    <url-pattern>/dangkythanhvien</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>nhatuyendungdangky</display-name>
+    <servlet-name>nhatuyendungdangky</servlet-name>
+    <servlet-class>jobsearch.controller.nhatuyendungdangky</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>nhatuyendungdangky</servlet-name>
+    <url-pattern>/nhatuyendungdangky</url-pattern>
+  </servlet-mapping>
 </web-app>

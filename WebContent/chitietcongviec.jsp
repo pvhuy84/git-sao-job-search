@@ -105,8 +105,24 @@ background-color: #f2f2f2;
        <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Việc làm theo tỉnh</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Đăng ký</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+        <li class="dropdown">
+         
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-out"></span>Đăng Ký
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Cá nhân</a></li>
+          <li><a href="#">Doanh nghiệp</a></li>
+        </ul>
+      </li>
+       <li class="dropdown">
+       
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-in"></span>Đăng Nhập
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Cá nhân</a></li>
+          <li><a href="#">Doanh nghiệp</a></li>
+        </ul>
+      </li>
       </ul>
     </div>
   </div>
@@ -280,108 +296,122 @@ background-color: #f2f2f2;
      <h5 align="left">Địa chỉ : Liên chiểu - Đà Nẵng </h5>
      </div>
      </div>
-     <div class="row">
-     <hr>
-    <div class="col-sm-6">
-    
-      <div id="home" class="tab-pane fade in active">
-  <div class="a">
- 
-     <div class="col-sm-12">
-   
-    <div class="col-xs-7" >
-  <b> <p align="left">Mức Lương</p></b>
-  <b> <p align="left">Kinh nghiệm</p></b>	
-  <b> <p align="left">Trình độ</p></b>
-  <b>  <p align="left">Tỉnh/Thành phố</p></b>
-   
-    </div>
-      <div class="col-xs-5" >
-         <p align="left">5-7 triệu</p>
-   <p align="left">2 năm</p>
-   <p align="left">Đại học</p>
-    <p align="left">Quảng Nam</p>
-    </div>
-    
-     </div>
-  
-     </div>
-    </div>
-    </div>
-    <div class="col-sm-6">
-     <div id="home" class="tab-pane fade in active">
-  <div class="a">
- 
-     <div class="col-sm-12">
-   <div class="col-xs-7">
-    <b> <p align="left">Số lượng tuyển dụng</p></b>
-  <b> <p align="left">Giới tính</p></b>
-  <b> <p align="left">Tính chất công việc</p></b>
-  <b>  <p align="left">Hình thức làm việc</p></b>
-    </div>
-      <div class="col-xs-5" >
-        <p align="left">2</p>
-      <p align="left">Không yêu cầu</p>
-      <p align="left">Giờ hành chính</p>
-      <p align="left">Nhân viên chính thức</p>
-    </div>
-     </div>
-  
-     </div>
-    </div>
-    </div>
-   
-  </div>
-  <div class="row">
-  <div class="container">
-  <h2>Công việc</h2>
-  <table class="table">
-    <tbody>
-      <tr>
-        <td align="left">Mô tả</td>
-        <td align="left">Bòn bon là loại quả được nhiều người yêu thích. <br>
-        Tuy nhiên, bạn cần tránh một số điều sau nếu không muốn rước họa vào thân.</td>
-      </tr>
-      <tr>
-        <td align="left">Yêu cầu </td>
-        <td align="left">Moe</td>
-      </tr>
-      <tr>
-        <td align="left">Quyền lợi</td>
-        <td align="left">Dooley</td>
-      </tr>
-       <tr>
-        <td align="left">Hạn nạp</td>
-        <td align="left">Doole</td>
-      </tr>
-       <tr align="left">
-        <td align="left">Hình thức nạp</td>
-        <td align="left">Dooley</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-  
-  </div>
-   <div class="row">
-   <div class="container">
-  <h3>Thông tin liên hệ</h3>
-  <div class="col-xs-4">
-  </div>
-  <div class="col-xs-3">
-    <b> <p align="left">Người liên hệ</p></b>
-  <b> <p align="left">Địa chỉ</p></b>
-  <b> <p align="left">Số điện thoại</p></b>
-    </div>
-      <div class="col-xs-3" >
-        <p align="left">Nguyễn Văn A</p>
-      <p align="left">Đà Nẵng</p>
-      <p align="left">0174869475</p>
-    </div>
-     <div class="col-xs-2">
-  </div>
-  </div>
-   </div>
+		<div class="row">
+			<hr>
+			<div class="col-sm-6">
+
+				<div id="home" class="tab-pane fade in active">
+					<div class="a">
+
+						<div class="col-sm-12">
+
+							<div class="col-xs-7">
+								<b>
+									<p align="left">Mức Lương</p>
+								</b> <b>
+									<p align="left">Kinh nghiệm</p>
+								</b> <b>
+									<p align="left">Trình độ</p>
+								</b> <b>
+									<p align="left">Tỉnh/Thành phố</p>
+								</b>
+
+							</div>
+							<div class="col-xs-5">
+								<p align="left">5-7 triệu</p>
+								<p align="left">2 năm</p>
+								<p align="left">Đại học</p>
+								<p align="left">Quảng Nam</p>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div id="home" class="tab-pane fade in active">
+					<div class="a">
+
+						<div class="col-sm-12">
+							<div class="col-xs-7">
+								<b>
+									<p align="left">Số lượng tuyển dụng</p>
+								</b> <b>
+									<p align="left">Giới tính</p>
+								</b> <b>
+									<p align="left">Tính chất công việc</p>
+								</b> <b>
+									<p align="left">Hình thức làm việc</p>
+								</b>
+							</div>
+							<div class="col-xs-5">
+								<p align="left">2</p>
+								<p align="left">Không yêu cầu</p>
+								<p align="left">Giờ hành chính</p>
+								<p align="left">Nhân viên chính thức</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="container">
+				<h2>Công việc</h2>
+				<table class="table">
+					<tbody>
+						<tr>
+							<td align="left">Mô tả</td>
+							<td align="left">Bòn bon là loại quả được nhiều người yêu
+								thích. <br> Tuy nhiên, bạn cần tránh một số điều sau nếu
+								không muốn rước họa vào thân.
+							</td>
+						</tr>
+						<tr>
+							<td align="left">Yêu cầu</td>
+							<td align="left">Moe</td>
+						</tr>
+						<tr>
+							<td align="left">Quyền lợi</td>
+							<td align="left">Dooley</td>
+						</tr>
+						<tr>
+							<td align="left">Hạn nạp</td>
+							<td align="left">Doole</td>
+						</tr>
+						<tr align="left">
+							<td align="left">Hình thức nạp</td>
+							<td align="left">Dooley</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="container">
+				<h3>Thông tin liên hệ</h3>
+				<div class="col-xs-4"></div>
+				<div class="col-xs-3">
+					<b>
+						<p align="left">Người liên hệ</p>
+					</b> <b>
+						<p align="left">Địa chỉ</p>
+					</b> <b>
+						<p align="left">Số điện thoại</p>
+					</b>
+				</div>
+				<div class="col-xs-3">
+					<p align="left">Nguyễn Văn A</p>
+					<p align="left">Đà Nẵng</p>
+					<p align="left">0174869475</p>
+				</div>
+				<div class="col-xs-2"></div>
+			</div>
+		</div>
 </div><br>
 
 <footer class="container-fluid text-center">
