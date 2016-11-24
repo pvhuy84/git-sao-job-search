@@ -9,6 +9,76 @@ import jobsearch.model.bean.User;
 
 public class UserDAO extends DatabaseFactory {
 	String sql = "";
+	
+	// Kiem tra dang nhap
+	public Notification checkUser(String email, String password) {
+		sql = "SELECT * FROM user WHERE email=? and password=?";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, email);
+			preparedStatement.setString(2, password);
+			ResultSet rs = preparedStatement.executeQuery();
+			if (rs.next()) {
+				preparedStatement.close();
+				return (new Notification("success", "Login successful!"));
+			} else {
+				preparedStatement.close();
+				return (new Notification("error", "Invalid email or password!"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return (new Notification("error", "Database error!"));
+		}
+	}
+
+	// Them user la jobseeker	
+	public Notification addUserJobseeker(String email, String password, String fullname, String phonenumber) {
+		int usertype=0;
+		sql = "SELECT * FROM user WHERE email=?";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, email);
+			ResultSet rs = preparedStatement.executeQuery();
+			if (rs.next()) {
+				preparedStatement.close();
+				return (new Notification("error", "Email exist!"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		sql = "INSERT INTO user VALUES(?,?,?)";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, email);
+			preparedStatement.setString(2, password);
+			preparedStatement.setInt(3, usertype);
+			if (preparedStatement.execute()) {
+				preparedStatement.close();
+				return (new Notification("error", "Database error!"));
+			} else {
+				sql = "INSERT INTO jobseeker(fullname, email, phonenumber) VALUES(?,?,?)";
+				preparedStatement = connection.prepareStatement(sql);
+				preparedStatement.setString(1, fullname);
+				preparedStatement.setString(2, email);
+				preparedStatement.setString(3, phonenumber);
+				if (!preparedStatement.execute()) {
+					preparedStatement.close();
+					return (new Notification("success", "Add successful new user!"));
+				} 
+			}
+			preparedStatement.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return (new Notification("error", "Database error!"));
+		}
+		return (new Notification("error", "Database error!"));
+	}
+	
+	/*
+	 * 
+	 * 
+	 */
 
 	// lay danh sach user
 	public ArrayList<User> getListUser() {
@@ -122,24 +192,5 @@ public class UserDAO extends DatabaseFactory {
 		return (new Notification("error", "Database error!"));
 	}
 
-	// Kiem tra user
-	public Notification checkUser(String email, String password) {
-		sql = "SELECT * FROM user WHERE email=? and password=?";
-		try {
-			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setString(1, email);
-			preparedStatement.setString(2, password);
-			ResultSet rs = preparedStatement.executeQuery();
-			if (rs.next()) {
-				preparedStatement.close();
-				return (new Notification("success", "Login successful!"));
-			} else {
-				preparedStatement.close();
-				return (new Notification("error", "Invalid email or password!"));
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-			return (new Notification("error", "Database error!"));
-		}
-	}
+	
 }

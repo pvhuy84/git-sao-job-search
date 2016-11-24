@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -15,29 +16,56 @@ import javax.ws.rs.core.Response;
 
 import org.json.JSONArray;
 
-import jobsearch.entity.Notification;
 import jobsearch.model.bean.User;
-import jobsearch.model.bo.UserBO;
+import jobsearch.model.dao.UserDAO;
 
-@Path("/")
+@Path("/user")
 public class UserServices {
+	
+	//Dang ky (done)
+	@POST
+	@Path("/adduserjobseeker")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response addUserJobseeker(@FormParam("email") String email, @FormParam("password") String password,
+			@FormParam("fullname") String fullname, @FormParam("phonenumber") String phonenumber) {
+		String result=new UserDAO().addUserJobseeker(email, password, fullname, phonenumber).toJSON().toString();
+		return Response.ok() //200
+				.entity(result)
+				.header("Access-Control-Allow-Origin", "*")
+				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+				.allow("OPTIONS").build();
+	}
+	
+	//Dang nhap (done)
+	@POST
+	@Path("/checkuser")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response checkUser(@FormParam("email") String email, @FormParam("password") String password) {
+		String result=new UserDAO().checkUser(email, password).toJSON().toString();
+		return Response.ok() //200
+				.entity(result)
+				.header("Access-Control-Allow-Origin", "*")
+				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+				.allow("OPTIONS").build();
+	}
+	
+	/*
+	 * 
+	 */
+	 
 
 	@GET
 	@Path("/getlistuser")
 	@Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-//	public String getListUser() {
-//		ArrayList<User> listUser = new ArrayList<>();
-//		listUser = (new UserBO().getListUser());
-//		JSONArray listUserJson = new JSONArray();
-//		listUserJson.put(listUser);
-//		return listUserJson.toString();
-//	}
+
 	public Response getListUser() {
 		ArrayList<User> listUser = new ArrayList<>();
-		listUser = (new UserBO().getListUser());
+		listUser = (new UserDAO().getListUser());
 		JSONArray listUserJson = new JSONArray();
-		listUserJson.put(listUser);
+		for(int i=0;i<listUser.size();i++) {
+			listUserJson.put(listUser.get(i).toJSON());
+		}
 		String result=listUserJson.toString();
 		return Response.ok() //200
 				.entity(result)
@@ -46,20 +74,7 @@ public class UserServices {
 				.allow("OPTIONS").build();
 	}
 
-	@POST
-	@Path("/adduser")
-	@Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
-	public Response addUser(@QueryParam("email") String email, @QueryParam("password") String password,
-			@QueryParam("usertype") String usertype) {
-		int usertypeInt = Integer.parseInt(usertype);
-		String result=new UserBO().addUser(new User(email, password, usertypeInt)).toJSON().toString();
-		return Response.ok() //200
-				.entity(result)
-				.header("Access-Control-Allow-Origin", "*")
-				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-				.allow("OPTIONS").build();
-	}
+	
 
 	@PUT
 	@Path("/edituser")
@@ -68,7 +83,7 @@ public class UserServices {
 	public Response editUser(@QueryParam("email") String email, @QueryParam("password") String password,
 			@QueryParam("usertype") String usertype) {
 		int usertypeInt = Integer.parseInt(usertype);
-		String result=new UserBO().editUser(new User(email, password, usertypeInt)).toJSON().toString();
+		String result=new UserDAO().editUser(new User(email, password, usertypeInt)).toJSON().toString();
 		return Response.ok() //200
 				.entity(result)
 				.header("Access-Control-Allow-Origin", "*")
@@ -81,7 +96,7 @@ public class UserServices {
 	@Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
 	public Response deleteUser(@QueryParam("email") String email) {
-		String result=new UserBO().deleteUser(email).toJSON().toString();
+		String result=new UserDAO().deleteUser(email).toJSON().toString();
 		return Response.ok() //200
 				.entity(result)
 				.header("Access-Control-Allow-Origin", "*")
@@ -89,17 +104,7 @@ public class UserServices {
 				.allow("OPTIONS").build();
 	}
 
-	@POST
-	@Path("/checkuser")
-	@Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
-	public Response checkUser(@QueryParam("email") String email, @QueryParam("password") String password) {
-		String result=new UserBO().checkUser(email, password).toJSON().toString();
-		return Response.ok() //200
-				.entity(result)
-				.header("Access-Control-Allow-Origin", "*")
-				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-				.allow("OPTIONS").build();
-	}
+	
+	
 
 }

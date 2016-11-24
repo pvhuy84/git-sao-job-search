@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <display-name>git-soa-job-search</display-name>
+  <display-name>soa-job-search</display-name>
   <welcome-file-list>
     <welcome-file>home</welcome-file>
   </welcome-file-list>
@@ -16,34 +16,5 @@
   <servlet-mapping>
     <servlet-name>Jersey REST Service</servlet-name>
     <url-pattern>/services/*</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <display-name>home</display-name>
-    <servlet-name>jobsearch.controller.home</servlet-name>
-    <servlet-class>jobsearch.controller.home</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>jobsearch.controller.home</servlet-name>
-    <url-pattern>/home</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>dangkythanhvien</display-name>
-    <servlet-name>dangkythanhvien</servlet-name>
-    <servlet-class>jobsearch.controller.dangkythanhvien</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>dangkythanhvien</servlet-name>
-    <url-pattern>/dangkythanhvien</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>nhatuyendungdangky</display-name>
-    <servlet-name>nhatuyendungdangky</servlet-name>
-    <servlet-class>jobsearch.controller.nhatuyendungdangky</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>nhatuyendungdangky</servlet-name>
-    <url-pattern>/nhatuyendungdangky</url-pattern>
   </servlet-mapping>
 </web-app>

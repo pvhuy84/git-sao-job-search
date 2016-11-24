@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All Services</title>
+        <link rel="stypesheet" href="css/bootstrap.css">
+        <style type="text/css">
+        	a{
+        		color: #blue;
+			    text-decoration: none;
+			}
+        </style>
+        <script>
+            $(document).ready(function() {
+               
+            });
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <div class="services">
+            	<ul><p>Services:</p>
+            		<li>Đăng nhập (@FormParam("email"), @FormParam("password")): 
+            			<a href="http://localhost:8080/sao-job-search/services/user/checkuser">
+            				http://localhost:8080/sao-job-search/services/user/checkuser
+            			</a>
+            		</li>
+            		<li>Đăng ký cho ứng viên (@FormParam("email"), @FormParam("password"), @FormParam("fullname"), @FormParam("phonenumber")): 
+            			<a href="http://localhost:8080/sao-job-search/services/user/adduserjobseeker">
+            				http://localhost:8080/sao-job-search/services/user/adduserjobseeker
+            			</a>
+            		</li>
+            		<li>Danh sách các tỉnh thành phố: 
+            			<a href="http://localhost:8080/sao-job-search/services/province/getallprovice">
+            				http://localhost:8080/sao-job-search/services/province/getallprovice
+            			</a>
+            		</li>
+            		<li>Lấy danh sách quận huyện (@QueryParam("provinceid") ex:01): 
+            			<a href="http://localhost:8080/sao-job-search/services/district/getlistdistrict?provinceid=?">
+            				http://localhost:8080/sao-job-search/services/district/getlistdistrict?provinceid=?
+            			</a>
+            		</li>
+            		
+            	</ul>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </body>
+</html>

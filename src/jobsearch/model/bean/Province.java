@@ -6,10 +6,10 @@ import org.json.JSONObject;
 public class Province {
 	private String provinceId;
 	private String provinceName;
-	private int type;
+	private String type;
 	public Province() {
 	}
-	public Province(String provinceId, String provinceName, int type) {
+	public Province(String provinceId, String provinceName, String type) {
 		this.provinceId = provinceId;
 		this.provinceName = provinceName;
 		this.type = type;
@@ -26,10 +26,10 @@ public class Province {
 	public void setProvinceName(String provinceName) {
 		this.provinceName = provinceName;
 	}
-	public int getType() {
+	public String getType() {
 		return type;
 	}
-	public void setType(int type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 	public JSONObject toJSON() {

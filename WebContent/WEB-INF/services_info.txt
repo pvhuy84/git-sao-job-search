@@ -1,4 +1,0 @@
-Add Jobseeker
-Method POST
-jobsearch-teen9x.rhcloud.com/jobsearch/services/addjobseeker?email=huy@email.com&&password=123456&&fullname=phamvanhuy&&phonenumber=0123456789
-http://localhost:8080/git-sao-job-search/services/addjobseeker?email=huy@email.com&&password=123456&&fullname=phamvanhuy&&phonenumber=0123456789
