@@ -32,8 +32,7 @@ public class UserServices {
 		return Response.ok() //200
 				.entity(result)
 				.header("Access-Control-Allow-Origin", "*")
-				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-				.allow("OPTIONS").build();
+				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT").build();
 	}
 	
 	//Dang nhap (done)
@@ -45,8 +44,7 @@ public class UserServices {
 		return Response.ok() //200
 				.entity(result)
 				.header("Access-Control-Allow-Origin", "*")
-				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-				.allow("OPTIONS").build();
+				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT").build();
 	}
 	
 	/*
@@ -70,8 +68,7 @@ public class UserServices {
 		return Response.ok() //200
 				.entity(result)
 				.header("Access-Control-Allow-Origin", "*")
-				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-				.allow("OPTIONS").build();
+				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT").build();
 	}
 
 	
@@ -87,8 +84,7 @@ public class UserServices {
 		return Response.ok() //200
 				.entity(result)
 				.header("Access-Control-Allow-Origin", "*")
-				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-				.allow("OPTIONS").build();
+				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT").build();
 	}
 
 	@DELETE
@@ -100,8 +96,7 @@ public class UserServices {
 		return Response.ok() //200
 				.entity(result)
 				.header("Access-Control-Allow-Origin", "*")
-				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-				.allow("OPTIONS").build();
+				.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT").build();
 	}
 
 	

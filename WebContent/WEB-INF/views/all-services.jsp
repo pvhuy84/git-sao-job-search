@@ -1,6 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>All Services</title>
         <link rel="stypesheet" href="css/bootstrap.css">
         <style type="text/css">
@@ -21,23 +24,23 @@
             <div class="services">
             	<ul><p>Services:</p>
             		<li>Đăng nhập (@FormParam("email"), @FormParam("password")): 
-            			<a href="http://localhost:8080/sao-job-search/services/user/checkuser">
-            				http://localhost:8080/sao-job-search/services/user/checkuser
+            			<a href="<%=request.getContextPath()+"/services/user/checkuser"%>">
+            				<%=request.getContextPath()+"/services/user/checkuser"%>
             			</a>
             		</li>
             		<li>Đăng ký cho ứng viên (@FormParam("email"), @FormParam("password"), @FormParam("fullname"), @FormParam("phonenumber")): 
-            			<a href="http://localhost:8080/sao-job-search/services/user/adduserjobseeker">
-            				http://localhost:8080/sao-job-search/services/user/adduserjobseeker
+            			<a href="<%=request.getContextPath()+"/services/user/adduserjobseeker"%>">
+            				<%=request.getContextPath()+"/services/user/adduserjobseeker"%>
             			</a>
             		</li>
             		<li>Danh sách các tỉnh thành phố: 
-            			<a href="http://localhost:8080/sao-job-search/services/province/getallprovice">
-            				http://localhost:8080/sao-job-search/services/province/getallprovice
+            			<a href="<%=request.getContextPath()+"/services/province/getallprovice"%>">
+            				<%=request.getContextPath()+"/services/province/getallprovice"%>
             			</a>
             		</li>
             		<li>Lấy danh sách quận huyện (@QueryParam("provinceid") ex:01): 
-            			<a href="http://localhost:8080/sao-job-search/services/district/getlistdistrict?provinceid=?">
-            				http://localhost:8080/sao-job-search/services/district/getlistdistrict?provinceid=?
+            			<a href="<%=request.getContextPath()+"/services/district/getlistdistrict?provinceid=?"%>">
+            				<%=request.getContextPath()+"/services/district/getlistdistrict?provinceid=?"%>
             			</a>
             		</li>
             		
