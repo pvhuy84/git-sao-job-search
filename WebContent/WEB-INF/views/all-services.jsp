@@ -33,6 +33,11 @@
             				<%=request.getContextPath()+"/services/user/adduserjobseeker"%>
             			</a>
             		</li>
+            		<li>Đăng ký cho nhà tuyển dụng (@FormParam("email"), @FormParam("password"), @FormParam("name"), @FormParam("detail"), @FormParam("address"), @FormParam("provinceId"), @FormParam("phonenumber"), @FormParam("website"), @FormParam("scale")): 
+            			<a href="<%=request.getContextPath()+"/services/user/adduserrecruiter"%>">
+            				<%=request.getContextPath()+"/services/user/adduserrecruiter"%>
+            			</a>
+            		</li>
             		<li>Danh sách các tỉnh thành phố: 
             			<a href="<%=request.getContextPath()+"/services/province/getallprovice"%>">
             				<%=request.getContextPath()+"/services/province/getallprovice"%>

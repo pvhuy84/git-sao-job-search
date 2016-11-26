@@ -6,7 +6,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Jobseeker  {
-    private int jobseekerId;
+    private Integer jobseekerId;
     private String fullname;
     private String email;
     private Date birthday;
@@ -17,7 +17,8 @@ public class Jobseeker  {
     public Jobseeker() {
     }
 
-	public Jobseeker( String fullname, String email, Date birthday, int gender, int status, String phonenumber) {
+	public Jobseeker(Integer jobseekerId, String fullname, String email, Date birthday, int gender, int status, String phonenumber) {
+		this.jobseekerId=jobseekerId;
 		this.fullname = fullname;
 		this.email = email;
 		this.birthday = birthday;
@@ -34,11 +35,11 @@ public class Jobseeker  {
 		this.phonenumber = phonenumber;
 	}
 
-	public int getJobseekerId() {
+	public Integer getJobseekerId() {
 		return jobseekerId;
 	}
 
-	public void setJobseekerId(int jobseekerId) {
+	public void setJobseekerId(Integer jobseekerId) {
 		this.jobseekerId = jobseekerId;
 	}
 

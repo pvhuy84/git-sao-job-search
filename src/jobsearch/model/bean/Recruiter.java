@@ -4,21 +4,21 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Recruiter {
-	private int recruiterId;
+	private Integer recruiterId;
 	private String email;
 	private String name;
 	private String detail;
 	private String address;
 	private String provinceId;
-	private int phonenumber;
+	private String phonenumber;
 	private String website;
-	private int star;
+	private int scale;
 
 	public Recruiter() {
 	}
 
-	public Recruiter(int recruiterId, String email, String name, String detail, String address, String provinceId,
-			int phonenumber, String website, int star) {
+	public Recruiter(Integer recruiterId, String email, String name, String detail, String address, String provinceId,
+			String phonenumber, String website, int scale) {
 		this.recruiterId = recruiterId;
 		this.email = email;
 		this.name = name;
@@ -27,7 +27,7 @@ public class Recruiter {
 		this.provinceId = provinceId;
 		this.phonenumber = phonenumber;
 		this.website = website;
-		this.star = star;
+		this.scale = scale;
 	}
 
 	public int getRecruiterId() {
@@ -78,11 +78,11 @@ public class Recruiter {
 		this.provinceId = provinceId;
 	}
 
-	public int getPhonenumber() {
+	public String getPhonenumber() {
 		return phonenumber;
 	}
 
-	public void setPhonenumber(int phonenumber) {
+	public void setPhonenumber(String phonenumber) {
 		this.phonenumber = phonenumber;
 	}
 
@@ -94,12 +94,12 @@ public class Recruiter {
 		this.website = website;
 	}
 
-	public int getStar() {
-		return star;
+	public int getScale() {
+		return scale;
 	}
 
-	public void setStar(int star) {
-		this.star = star;
+	public void setScale(int scale) {
+		this.scale = scale;
 	}
 	public JSONObject toJSON() {
 		JSONObject obj = new JSONObject();
@@ -112,7 +112,7 @@ public class Recruiter {
 			obj.put("provinceId", provinceId);
 			obj.put("phonenumber", phonenumber);
 			obj.put("website", website);
-			obj.put("star", star);
+			obj.put("scale", scale);
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
